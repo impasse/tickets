@@ -30,4 +30,4 @@ Options:
 -z                               直达
 ```
 
-*tested on archlinux & windows(mingw32)*
+*tested on archlinux & windows(mingw32-cruby)*
