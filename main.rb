@@ -9,12 +9,12 @@ module Train
 		<<-DOC.gsub(/^\s+\|?/, '')
 		Train tickets query via cli.
 		Usage:
-    	#{__FILE__} [options] [update] <from> <to> [<date>]
+		#{__FILE__} [options] [update] <from> <to> [<date>]
 		Arguments:
 		update           更新数据
-    	from             出发站
-    	to               到达站
-    	date             查询日期<YYYY-MM-DD>,默认当日
+		from             出发站
+		to               到达站
+		date             查询日期<YYYY-MM-DD>,默认当日
 		Options: #{yield}
 		DOC
 	end
@@ -43,10 +43,10 @@ module Train
 			end
 		else
 			if /^linux/i =~ RbConfig::CONFIG['host_os']
-        		ARGV.map! do |i|
-            		i.dup.force_encoding 'utf-8' if i.encoding == Encoding::ASCII_8BIT
-        		end
-    		else
+				ARGV.map! do |i|
+					i.encoding == Encoding::ASCII_8BIT ? i.dup.force_encoding('utf-8') : i
+				end
+			else
 				ARGV.map! do |i|
 					i.dup.encode! 'utf-8'
 				end

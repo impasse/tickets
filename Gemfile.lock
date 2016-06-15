@@ -1,0 +1,40 @@
+GEM
+  remote: http://gems.ruby-china.org/
+  specs:
+    addressable (2.4.0)
+    domain_name (0.5.20160310)
+      unf (>= 0.0.5, < 1.0.0)
+    http (2.0.1)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (~> 1.0.1)
+      http_parser.rb (~> 0.6.0)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
+    http-form_data (1.0.1)
+    http_parser.rb (0.6.0)
+    mb_string (0.1.6)
+      unicode-display_width (~> 1.0.3)
+    term-ansicolor (1.3.2)
+      tins (~> 1.0)
+    terminal-table (1.6.0)
+    terminal-table-unicode (0.1.7)
+      mb_string (~> 0.1.6)
+      terminal-table (~> 1.5)
+      unicode-display_width (~> 1.0.3)
+    tins (1.10.2)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.2)
+    unicode-display_width (1.0.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  http
+  term-ansicolor
+  terminal-table-unicode
+
+BUNDLED WITH
+   1.12.5

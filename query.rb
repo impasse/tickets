@@ -47,7 +47,7 @@ module Train
 			end
 			key.is_a?(Symbol) ? @@dict[key.id2name] : @@dict[key] or key
 		end
-	
+
 		def self.[](from, to, date = nil)
 			# constructor
 			Query.new(from, to, date).call
