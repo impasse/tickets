@@ -28,10 +28,10 @@ module Train
         def initialize(from, to, date = nil)
             @purpose = 'ADULT'.freeze
             @date = begin
-                        Time.parse(date).strftime('%Y-%m-%d')
+                        Time.parse(date)
                     rescue
-                        Time.now.strftime('%Y-%m-%d')
-                    end
+                        Time.now
+                    end.strftime('%Y-%m-%d')
             @from,@to = [from,to].map {|x| /^[A-Z]+$/ =~ x ? x : Query.trans(x) }
         end
 
