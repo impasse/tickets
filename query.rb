@@ -54,7 +54,7 @@ module Train
         end
 
         def call
-            return [] if @date.nil? || @from.nil? || @to.nil?
+            return [] if @from.nil? || @to.nil?
             res = HTTP.get('https://kyfw.12306.cn/otn/lcxxcx/query'.freeze, :params => {:purpose_codes=>@purpose, :queryDate=>@date, :from_station=>@from, :to_station=>@to }, :ssl_context=>@@ctx)
             return [] unless res.code == 200
             begin
