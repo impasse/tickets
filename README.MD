@@ -7,6 +7,7 @@ train tickets query via cli
 ```
 git clone https://github.com/lingmm/tickets.git
 cd tickets
+bundle install
 ```
 
 ## Run
